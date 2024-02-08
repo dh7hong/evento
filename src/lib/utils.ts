@@ -12,6 +12,7 @@ export function cn(...inputs: ClassValue[]) {
 // and we want to merge it with some base styles.
 //
 
+
 export function capitalize(string: string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
