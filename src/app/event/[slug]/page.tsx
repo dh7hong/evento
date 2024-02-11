@@ -142,7 +142,7 @@ function SectionHeading({ children }: { children: React.ReactNode }) {
 
 function SectionContent({ children }: { children: React.ReactNode }) {
   return (
-    <p className="max-w-4xl mx-auto text-lg leading-8 text-white/75">
+    <p className="max-w-3xl mx-auto text-lg leading-8 text-white/75">
       {children}
     </p>
   );
