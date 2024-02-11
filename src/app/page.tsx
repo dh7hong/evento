@@ -4,7 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center px-3 pt-36 ">
+    <main className="flex flex-col items-center px-3 pt-36 
+    text-center mb-2 mt-2 lg:text-5xl break-words">
       <H1>Find events around you</H1>
       <p className="mb-12 mt-7 text-2xl lg:text-3xl text-center">
         Browse more than{" "}

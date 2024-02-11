@@ -21,9 +21,10 @@ export default function SearchForm() {
         value={searchText}
         onChange={(e) => setSearchText(e.target.value)}
         className="w-full h-16 rounded-lg bg-white/[7%] px-6 outline-none 
-          ring-accent/50 transition focus:ring-2 focus:bg-white/10"
+          ring-accent/50 transition focus:ring-2 focus:bg-white/10 text-lg"
         placeholder="Search events in any city..."
         spellCheck={false}
+        // style={{ fontSize: '18px' }}
       />
     </form>
   );

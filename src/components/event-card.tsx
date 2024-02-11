@@ -34,8 +34,7 @@ export default function EventCard({ event }: EventCardProps) {
   return (
     <MotionLink
       ref={ref}
-      className="flex-1 basis-80 h-[380px] 
-    max-w-[500px]"
+      className="flex-1 basis-80 h-[350px] max-w-[500px]"
       href={`/event/${event.slug}`}
       // @ts-ignore
       style={{ scale: scaleProgress, opacity: opacityProgress }}
@@ -53,7 +52,9 @@ export default function EventCard({ event }: EventCardProps) {
           className="h-[60%] object-cover"
         />
         <div className="flex flex-col flex-1 justify-center items-center">
-          <h2 className="text-center text-2xl font-semibold mb-1">{event.name}</h2>
+          <h2 className="text-center text-2xl font-semibold mb-1">
+            {event.name}
+          </h2>
           <p className="text-center italic text-white/75">
             {event.organizerName}
           </p>

@@ -1,5 +1,6 @@
 import H1 from "@/components/h1";
 import { getEvent } from "@/lib/server-utils";
+import { sleep } from "@/lib/utils";
 import { Metadata } from "next";
 import Image from "next/image";
 
@@ -42,6 +43,7 @@ export async function generateStaticParams() {
 
 export default async function EventPage({ params }: Props) {
   const slug = params.slug;
+  await sleep(4000);
   const event = await getEvent(slug);
 
   if (!event) {
@@ -78,14 +80,13 @@ export default async function EventPage({ params }: Props) {
             priority
           />
 
-          <div className="z-1 flex flex-col lg:flex-row gap-6 lg:gap-16 relative"
-          >
+          <div className="z-1 flex flex-col lg:flex-row gap-6 lg:gap-16 relative">
             <Image
               src={event.imageUrl}
               alt={event.name}
               width={300}
               height={201}
-              className="h-[201px] rounded-xl self-center border-2 border-white/50 object-cover"
+              className="w-[260px] h-[201px] rounded-xl self-center border-2 border-white/50 object-cover"
             />
             <div className="flex flex-col">
               <p className="text-center text-white/75">
@@ -95,7 +96,7 @@ export default async function EventPage({ params }: Props) {
                   day: "numeric",
                 })}
               </p>
-              <H1 className=" text-center mb-2 mt-2 lg:text-5xl break-words">
+              <H1 className="text-center mb-2 mt-2 lg:text-5xl break-words">
                 {event.name}
               </H1>
               <p className="text-center break-words text-xl text-white/75">
