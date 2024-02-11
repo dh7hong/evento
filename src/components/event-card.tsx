@@ -50,11 +50,11 @@ export default function EventCard({ event }: EventCardProps) {
           alt={event.name}
           width={500}
           height={280}
-          className="h-[60%] object-cover "
+          className="h-[60%] object-cover"
         />
         <div className="flex flex-col flex-1 justify-center items-center">
-          <h2 className="text-2xl font-semibold">{event.name}</h2>
-          <p className="italic text-white/75">
+          <h2 className="text-center text-2xl font-semibold mb-1">{event.name}</h2>
+          <p className="text-center italic text-white/75">
             {event.organizerName}
           </p>
           <p className="text-sm text-white/50 mt-4">
